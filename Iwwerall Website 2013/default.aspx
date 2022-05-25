@@ -43,7 +43,7 @@ html {
                     &nbsp;</td>
                 <td width="50%">
                     <asp:Label ID="Label2" runat="server" Font-Names="Verdana" ForeColor="#6C56A4" 
-                        Text="Iwwerall sa - 58, rue du X Septembre - L-9560 WILTZ"></asp:Label>
+                        Text="Iwwerall sa - 35, Gruuss Strooss - L-9991 Weiswampach"></asp:Label>
                 </td>
             </tr>
             <tr>
@@ -51,7 +51,7 @@ html {
                     &nbsp;</td>
                 <td width="50%">
                     <asp:Label ID="Label3" runat="server" Font-Names="Verdana" ForeColor="#6C56A4" 
-                        Text="Tel: +352 20 30 10 52 - info@iwwerall.lu"></asp:Label>
+                        Text="Tel: +352 621 318 727 - info@iwwerall.lu"></asp:Label>
                 </td>
             </tr>
         </table>
