@@ -47,6 +47,10 @@ namespace Iwwerall_Website_2013.MiningCoProcessor
                     int ConnectionStrength = AF.intParse(Request.QueryString["ConnectionStrength"]);
                     int SystemRecoveryState = Request.QueryString["SystemRecoveryState"] == null ? 0 : AF.intParse(Request.QueryString["SystemRecoveryState"]);
                     long MillisToKeepPowerOff = Request.QueryString["MillisToKeepPowerOff"] == null ? 60000 : AF.Int64Parse(Request.QueryString["MillisToKeepPowerOff"]);
+                    double MaxAmpsRightPowersupply = Request.QueryString["MaxAmpsRightPowersupply"] == null ? 0 : AF.DoubleParse(Request.QueryString["MaxAmpsRightPowersupply"].Replace(".", ",")) / 10000;
+                    double MaxAmpsLeftPowersupply = Request.QueryString["MaxAmpsLeftPowersupply"] == null ? 0 : AF.DoubleParse(Request.QueryString["MaxAmpsLeftPowersupply"].Replace(".", ",")) / 10000;
+                    double MaxAmpsAux = Request.QueryString["MaxAmpsAux"] == null ? 0 : AF.DoubleParse(Request.QueryString["MaxAmpsAux"].Replace(".", ",")) / 10000;
+                    double MaxUnusedADCValue = Request.QueryString["MaxUnusedADCValue"] == null ? 0 : AF.DoubleParse(Request.QueryString["MaxUnusedADCValue"].Replace(".", ",")) / 10000;
 
                     long ID = AF.Int64Parse(AF.SQL_SendWithObjectResponse(conn, "MiningProcessorsStateUpdate", new List<SqlParameter> {
                         new SqlParameter(){ParameterName = "@ID", SqlDbType = System.Data.SqlDbType.BigInt, Value = SerialNumber },
@@ -70,7 +74,11 @@ namespace Iwwerall_Website_2013.MiningCoProcessor
                         new SqlParameter(){ParameterName = "@ConnectedToWifi", SqlDbType = System.Data.SqlDbType.VarChar, Size = 255, Value = ConnectedToWifi },
                         new SqlParameter(){ParameterName = "@ConnectionStrength", SqlDbType = System.Data.SqlDbType.Int, Value = ConnectionStrength },
                         new SqlParameter(){ParameterName = "@SystemRecoveryState", SqlDbType = System.Data.SqlDbType.Int, Value = SystemRecoveryState },
-                        new SqlParameter(){ParameterName = "@MillisToKeepPowerOff", SqlDbType = System.Data.SqlDbType.BigInt, Value = MillisToKeepPowerOff }}));
+                        new SqlParameter(){ParameterName = "@MillisToKeepPowerOff", SqlDbType = System.Data.SqlDbType.BigInt, Value = MillisToKeepPowerOff },
+                        new SqlParameter(){ParameterName = "@MaxAmpsRightPowersupply", SqlDbType = System.Data.SqlDbType.Float, Value = MaxAmpsRightPowersupply },
+                        new SqlParameter(){ParameterName = "@MaxAmpsLeftPowersupply", SqlDbType = System.Data.SqlDbType.Float, Value = MaxAmpsLeftPowersupply },
+                        new SqlParameter(){ParameterName = "@MaxAmpsAux", SqlDbType = System.Data.SqlDbType.Float, Value = MaxAmpsAux },
+                        new SqlParameter(){ParameterName = "@MaxUnusedADCValue", SqlDbType = System.Data.SqlDbType.Float, Value = MaxUnusedADCValue }}));
 
                     Response = ID.ToString();
                 }
