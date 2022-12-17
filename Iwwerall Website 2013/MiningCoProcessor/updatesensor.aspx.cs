@@ -42,7 +42,7 @@ namespace Iwwerall_Website_2013.MiningCoProcessor
                     double AmpsLeftPowersupply = AF.DoubleParse(Request.QueryString["AmpsLeftPowersupply"].Replace(".", ",")) / 10000;
                     double AmpsAux = AF.DoubleParse(Request.QueryString["AmpsAux"].Replace(".", ",")) / 10000;
                     double UnusedADCValue = AF.DoubleParse(Request.QueryString["UnusedADCValue"].Replace(".", ",")) / 10000;
-                    int BitMaskForHost = AF.intParse(Request.QueryString["BitMaskForHost"]);
+                    long BitMaskForHost = AF.Int64Parse(Request.QueryString["BitMaskForHost"]);
                     string ConnectedToWifi = Request.QueryString["ConnectedToWifi"];
                     int ConnectionStrength = AF.intParse(Request.QueryString["ConnectionStrength"]);
                     int SystemRecoveryState = Request.QueryString["SystemRecoveryState"] == null ? 0 : AF.intParse(Request.QueryString["SystemRecoveryState"]);
@@ -70,7 +70,7 @@ namespace Iwwerall_Website_2013.MiningCoProcessor
                         new SqlParameter(){ParameterName = "@AmpsLeftPowersupply", SqlDbType = System.Data.SqlDbType.Float, Value = AmpsLeftPowersupply },
                         new SqlParameter(){ParameterName = "@AmpsAux", SqlDbType = System.Data.SqlDbType.Float, Value = AmpsAux },
                         new SqlParameter(){ParameterName = "@UnusedADCValue", SqlDbType = System.Data.SqlDbType.Float, Value = UnusedADCValue },
-                        new SqlParameter(){ParameterName = "@BitMaskForHost", SqlDbType = System.Data.SqlDbType.Int, Value = BitMaskForHost },
+                        new SqlParameter(){ParameterName = "@BitMaskForHost", SqlDbType = System.Data.SqlDbType.BigInt, Value = BitMaskForHost },
                         new SqlParameter(){ParameterName = "@ConnectedToWifi", SqlDbType = System.Data.SqlDbType.VarChar, Size = 255, Value = ConnectedToWifi },
                         new SqlParameter(){ParameterName = "@ConnectionStrength", SqlDbType = System.Data.SqlDbType.Int, Value = ConnectionStrength },
                         new SqlParameter(){ParameterName = "@SystemRecoveryState", SqlDbType = System.Data.SqlDbType.Int, Value = SystemRecoveryState },
