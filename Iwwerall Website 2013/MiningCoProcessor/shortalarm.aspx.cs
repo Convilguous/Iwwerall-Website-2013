@@ -1,4 +1,5 @@
-﻿using Iwwerall;
+﻿using Convilguous_Shared;
+using Convilguous_Shared_OSDependent;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
@@ -11,7 +12,9 @@ namespace Iwwerall_Website_2013.MiningCoProcessor
 {
     public partial class shortalarm : System.Web.UI.Page
     {
-        AlgemeneFuncties AF = new AlgemeneFuncties();
+        GeneralFunctions GF = new GeneralFunctions();
+        GeneralFunctionsAppSpecific GFS = new GeneralFunctionsAppSpecific();
+
         static SqlConnection conn = new SqlConnection(@"server=database.convilguous.com,14333;database=ConvilguousWC;User ID=MinerProbe;Pwd=Kwakkerl77*;Asynchronous Processing=true;MultipleActiveResultSets=true; Connect Timeout=30");
 
         protected void Page_Load(object sender, EventArgs e)
@@ -23,12 +26,12 @@ namespace Iwwerall_Website_2013.MiningCoProcessor
             {
                 if (Request.QueryString["SerialNumber"] != null)
                 {
-                    long SerialNumber = AF.Int64Parse(Request.QueryString["SerialNumber"]);
-                    long EventID = AF.Int64Parse(Request.QueryString["EventID"]);
+                    long SerialNumber = GF.Int64Parse(Request.QueryString["SerialNumber"]);
+                    long EventID = GF.Int64Parse(Request.QueryString["EventID"]);
                     string Alarm = Request.QueryString["Alarm"];
-                    int AlarmType = Request.QueryString["Type"] == null ? 0 : AF.intParse(Request.QueryString["Type"]);
+                    int AlarmType = Request.QueryString["Type"] == null ? 0 : GF.IntParse(Request.QueryString["Type"]);
 
-                    AF.SQL_SendWithoutResponse(conn, "MiningProcessorShortAlarmsAdd", new List<SqlParameter> {
+                    GFS.SQL_SendWithoutResponse(conn, "MiningProcessorShortAlarmsAdd", new List<SqlParameter> {
                         new SqlParameter(){ParameterName = "@ID", SqlDbType = System.Data.SqlDbType.BigInt, Value = SerialNumber },
                         new SqlParameter(){ParameterName = "@Message", SqlDbType = System.Data.SqlDbType.VarChar, Size = 255, Value = Alarm },
                         new SqlParameter(){ParameterName = "@EventID", SqlDbType = System.Data.SqlDbType.BigInt, Value = EventID },
@@ -37,7 +40,7 @@ namespace Iwwerall_Website_2013.MiningCoProcessor
             }
             catch (Exception eee)
             {
-                AF.LogError(eee, System.Diagnostics.EventLogEntryType.Error, 2111200202);
+                GFS.LogError(eee, System.Diagnostics.EventLogEntryType.Error, 2111200202);
             }
             Page.Response.Write(Response);
         }

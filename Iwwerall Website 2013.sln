@@ -1,9 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34018.315
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Iwwerall Website 2013", "Iwwerall Website 2013\Iwwerall Website 2013.csproj", "{62E3D5C3-E82F-4671-B4C6-CE56B97A543B}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Convilguous Shared", "..\Shared-References\Convilguous Shared\Convilguous Shared.shproj", "{7AED680F-F1A2-4DF0-BEF9-DF6019F2D8E5}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Convilguous Shared Internal Use", "..\Shared-References\Convilguous Shared Internal Use\Convilguous Shared Internal Use.shproj", "{37263537-79BE-4A7E-B7A4-04C9A021804A}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Convilguous Shared Windows Background", "..\Shared-References\Convilguous Shared Windows Background\Convilguous Shared Windows Background.shproj", "{A0CACE71-B784-4FCA-8BF1-02C659451BFB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -18,5 +24,16 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {51F3C3F0-30BF-4DAC-ACAF-AA7BB855D788}
+	EndGlobalSection
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		..\Shared-References\Convilguous Shared Internal Use\Convilguous Shared Internal Use.projitems*{37263537-79be-4a7e-b7a4-04c9a021804a}*SharedItemsImports = 13
+		..\Shared-References\Convilguous Shared Internal Use\Convilguous Shared Internal Use.projitems*{62e3d5c3-e82f-4671-b4c6-ce56b97a543b}*SharedItemsImports = 4
+		..\Shared-References\Convilguous Shared Windows Background\Convilguous Shared Windows Background.projitems*{62e3d5c3-e82f-4671-b4c6-ce56b97a543b}*SharedItemsImports = 4
+		..\Shared-References\Convilguous Shared\Convilguous Shared.projitems*{62e3d5c3-e82f-4671-b4c6-ce56b97a543b}*SharedItemsImports = 4
+		..\Shared-References\Convilguous Shared\Convilguous Shared.projitems*{7aed680f-f1a2-4df0-bef9-df6019f2d8e5}*SharedItemsImports = 13
+		..\Shared-References\Convilguous Shared Windows Background\Convilguous Shared Windows Background.projitems*{a0cace71-b784-4fca-8bf1-02c659451bfb}*SharedItemsImports = 13
 	EndGlobalSection
 EndGlobal
