@@ -54,6 +54,10 @@ namespace Iwwerall_Website_2013
                             }
                         }
                     }
+                    else
+                    {
+                        Response.Redirect("https://www.iwwerall.lu");
+                    }
                 }
                 catch (Exception eee)
                 {
