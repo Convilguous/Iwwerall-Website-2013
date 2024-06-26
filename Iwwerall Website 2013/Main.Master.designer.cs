@@ -11,25 +11,34 @@ namespace Iwwerall_Website_2013
 {
 
 
-    public partial class resetpassword
+    public partial class Main
     {
 
         /// <summary>
-        /// lblVerificationStatus control.
+        /// cphHead control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblVerificationStatus;
+        protected global::System.Web.UI.WebControls.ContentPlaceHolder cphHead;
 
         /// <summary>
-        /// lblInfo control.
+        /// form1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblInfo;
+        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+
+        /// <summary>
+        /// cphBody control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ContentPlaceHolder cphBody;
     }
 }

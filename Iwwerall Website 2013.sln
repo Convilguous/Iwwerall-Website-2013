@@ -11,6 +11,16 @@ Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Convilguous Shared Internal
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Convilguous Shared Windows Background", "..\Shared-References\Convilguous Shared Windows Background\Convilguous Shared Windows Background.shproj", "{A0CACE71-B784-4FCA-8BF1-02C659451BFB}"
 EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Convilguous Shared Commsv7", "..\Shared-References\Convilguous Shared Commsv7\Convilguous Shared Commsv7.shproj", "{0066818E-FB5A-42D4-A908-E1462939AE8D}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Convilguous Shared Error Logging", "..\Shared-References\Convilguous Shared Error Logging\Convilguous Shared Error Logging.shproj", "{1D75826B-97A0-4BA4-B99E-635EC7AD1FC3}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Convilguous Shared Binary Comms", "..\Shared-References\Convilguous Shared Binary Comms\Convilguous Shared Binary Comms.shproj", "{A3B1E473-544F-4C3E-A932-F5F7CC635030}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Convilguous Shared SQL Server", "..\Shared-References\Convilguous Shared SQL Server\Convilguous Shared SQL Server.shproj", "{E2BCCC6B-04C1-40A7-A271-3F013C9597F1}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Convilguous Shared Non-Volatile Storage Windows", "..\Shared-References\Convilguous Shared Non-Volatile Storage Windows\Convilguous Shared Non-Volatile Storage Windows.shproj", "{D19DBB8C-5DF9-4D51-A535-674C19495DDE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,11 +39,21 @@ Global
 		SolutionGuid = {51F3C3F0-30BF-4DAC-ACAF-AA7BB855D788}
 	EndGlobalSection
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		..\Shared-References\Convilguous Shared Commsv7\Convilguous Shared Commsv7.projitems*{0066818e-fb5a-42d4-a908-e1462939ae8d}*SharedItemsImports = 13
+		..\Shared-References\Convilguous Shared Error Logging\Convilguous Shared Error Logging.projitems*{1d75826b-97a0-4ba4-b99e-635ec7ad1fc3}*SharedItemsImports = 13
 		..\Shared-References\Convilguous Shared Internal Use\Convilguous Shared Internal Use.projitems*{37263537-79be-4a7e-b7a4-04c9a021804a}*SharedItemsImports = 13
+		..\Shared-References\Convilguous Shared Binary Comms\Convilguous Shared Binary Comms.projitems*{62e3d5c3-e82f-4671-b4c6-ce56b97a543b}*SharedItemsImports = 4
+		..\Shared-References\Convilguous Shared Commsv7\Convilguous Shared Commsv7.projitems*{62e3d5c3-e82f-4671-b4c6-ce56b97a543b}*SharedItemsImports = 4
+		..\Shared-References\Convilguous Shared Error Logging\Convilguous Shared Error Logging.projitems*{62e3d5c3-e82f-4671-b4c6-ce56b97a543b}*SharedItemsImports = 4
 		..\Shared-References\Convilguous Shared Internal Use\Convilguous Shared Internal Use.projitems*{62e3d5c3-e82f-4671-b4c6-ce56b97a543b}*SharedItemsImports = 4
+		..\Shared-References\Convilguous Shared Non-Volatile Storage Windows\Convilguous Shared Non-Volatile Storage Windows.projitems*{62e3d5c3-e82f-4671-b4c6-ce56b97a543b}*SharedItemsImports = 4
+		..\Shared-References\Convilguous Shared SQL Server\Convilguous Shared SQL Server.projitems*{62e3d5c3-e82f-4671-b4c6-ce56b97a543b}*SharedItemsImports = 4
 		..\Shared-References\Convilguous Shared Windows Background\Convilguous Shared Windows Background.projitems*{62e3d5c3-e82f-4671-b4c6-ce56b97a543b}*SharedItemsImports = 4
 		..\Shared-References\Convilguous Shared\Convilguous Shared.projitems*{62e3d5c3-e82f-4671-b4c6-ce56b97a543b}*SharedItemsImports = 4
 		..\Shared-References\Convilguous Shared\Convilguous Shared.projitems*{7aed680f-f1a2-4df0-bef9-df6019f2d8e5}*SharedItemsImports = 13
 		..\Shared-References\Convilguous Shared Windows Background\Convilguous Shared Windows Background.projitems*{a0cace71-b784-4fca-8bf1-02c659451bfb}*SharedItemsImports = 13
+		..\Shared-References\Convilguous Shared Binary Comms\Convilguous Shared Binary Comms.projitems*{a3b1e473-544f-4c3e-a932-f5f7cc635030}*SharedItemsImports = 13
+		..\Shared-References\Convilguous Shared Non-Volatile Storage Windows\Convilguous Shared Non-Volatile Storage Windows.projitems*{d19dbb8c-5df9-4d51-a535-674c19495dde}*SharedItemsImports = 13
+		..\Shared-References\Convilguous Shared SQL Server\Convilguous Shared SQL Server.projitems*{e2bccc6b-04c1-40a7-a271-3f013c9597f1}*SharedItemsImports = 13
 	EndGlobalSection
 EndGlobal

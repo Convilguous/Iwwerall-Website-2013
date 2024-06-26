@@ -29,6 +29,7 @@ namespace Iwwerall_Website_2013
 
                         if (Code.Length != 64)
                         {
+                            lblStatus.Text = "Verification Failed";
                             lblInfo.Text = "The provided code is not valid";
                         }
                         else
@@ -37,6 +38,7 @@ namespace Iwwerall_Website_2013
 
                             if (dtResult.Rows.Count == 0)
                             {
+                                lblStatus.Text = "Verification Failed";
                                 lblInfo.Text = "The provided code does not exist in the database";
                             }
                             else
@@ -44,12 +46,15 @@ namespace Iwwerall_Website_2013
                                 switch (GF.Int64Parse(dtResult.Rows[0]["ID"]))
                                 {
                                     case 0:
+                                        lblStatus.Text = "Verification Failed";
                                         lblInfo.Text = "The provided code does not exist in the database";
                                         break;
                                     case 1:
+                                        lblStatus.Text = "Verification Failed";
                                         lblInfo.Text = "The provided code expired, please request a new one";
                                         break;
                                     default:
+                                        lblStatus.Text = "Verification Succesful";
                                         lblInfo.Text = "Your user account has been successfully verified !";
                                         break;
                                 }
@@ -63,7 +68,7 @@ namespace Iwwerall_Website_2013
                 }
                 catch (Exception eee)
                 {
-                    GFS.LogError(eee, System.Diagnostics.EventLogEntryType.Error, 2310110955);
+                    GFS.LogError(eee, GeneralFunctions.EventLogEntryType.Error, 2310110955);
                 }
             }
         }

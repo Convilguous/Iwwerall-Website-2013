@@ -11,7 +11,7 @@ namespace Iwwerall_Website_2013
 {
 
 
-    public partial class resetpassword
+    public partial class movetarget
     {
 
         /// <summary>
@@ -31,5 +31,14 @@ namespace Iwwerall_Website_2013
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblInfo;
+
+        /// <summary>
+        /// btnUpdateEmail control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnUpdateEmail;
     }
 }

@@ -107,8 +107,17 @@
     <Reference Include="PdfSharp.Charting, Version=1.50.5147.0, Culture=neutral, PublicKeyToken=f94615aa0424f9eb, processorArchitecture=MSIL">
       <HintPath>..\packages\PDFsharp.1.50.5147\lib\net20\PdfSharp.Charting.dll</HintPath>
     </Reference>
+    <Reference Include="protobuf-net, Version=3.0.0.0, Culture=neutral, PublicKeyToken=257b51d87d2e4d67, processorArchitecture=MSIL">
+      <HintPath>..\packages\protobuf-net.3.2.30\lib\net462\protobuf-net.dll</HintPath>
+    </Reference>
+    <Reference Include="protobuf-net.Core, Version=3.0.0.0, Culture=neutral, PublicKeyToken=257b51d87d2e4d67, processorArchitecture=MSIL">
+      <HintPath>..\packages\protobuf-net.Core.3.2.30\lib\net462\protobuf-net.Core.dll</HintPath>
+    </Reference>
     <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Buffers.4.5.1\lib\netstandard1.1\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Collections.Immutable, Version=7.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Collections.Immutable.7.0.0\lib\net462\System.Collections.Immutable.dll</HintPath>
     </Reference>
     <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -133,6 +142,10 @@
     </Reference>
     <Reference Include="System.Net" />
     <Reference Include="System.Net.Http" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
     <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
     </Reference>
@@ -199,16 +212,27 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="css\Styles.css" />
     <Content Include="default.aspx" />
     <Content Include="images\background.jpg" />
+    <Content Include="images\iwwerall-movesource.svg" />
+    <Content Include="images\iwwerall-movetarget.svg" />
+    <Content Include="images\iwwerall-original.svg" />
+    <Content Include="images\iwwerall-resetpassword.svg" />
+    <Content Include="images\iwwerall-terminate.svg" />
+    <Content Include="images\iwwerall-verification.svg" />
     <Content Include="images\logo250.jpg" />
     <Content Include="MiningCoProcessor\esp32miningmoduleupdate.aspx" />
     <Content Include="MiningCoProcessor\getremotecommands.aspx" />
     <Content Include="MiningCoProcessor\shortalarm.aspx" />
     <Content Include="MiningCoProcessor\updatesensor.aspx" />
+    <Content Include="movesource.aspx" />
+    <Content Include="movetarget.aspx" />
     <Content Include="myip.aspx" />
     <Content Include="resetpassword.aspx" />
+    <Content Include="terminate.aspx" />
     <Content Include="verification.aspx" />
+    <Content Include="videos\iwwerall-white-background-zoomed-out.mp4" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -224,6 +248,13 @@
     </Compile>
     <Compile Include="default.aspx.designer.cs">
       <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Main.Master.cs">
+      <DependentUpon>Main.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Main.Master.designer.cs">
+      <DependentUpon>Main.Master</DependentUpon>
     </Compile>
     <Compile Include="MiningCoProcessor\esp32miningmoduleupdate.aspx.cs">
       <DependentUpon>esp32miningmoduleupdate.aspx</DependentUpon>
@@ -253,6 +284,20 @@
     <Compile Include="MiningCoProcessor\updatesensor.aspx.designer.cs">
       <DependentUpon>updatesensor.aspx</DependentUpon>
     </Compile>
+    <Compile Include="movesource.aspx.cs">
+      <DependentUpon>movesource.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="movesource.aspx.designer.cs">
+      <DependentUpon>movesource.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="movetarget.aspx.cs">
+      <DependentUpon>movetarget.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="movetarget.aspx.designer.cs">
+      <DependentUpon>movetarget.aspx</DependentUpon>
+    </Compile>
     <Compile Include="myip.aspx.cs">
       <DependentUpon>myip.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -268,6 +313,13 @@
     <Compile Include="resetpassword.aspx.designer.cs">
       <DependentUpon>resetpassword.aspx</DependentUpon>
     </Compile>
+    <Compile Include="terminate.aspx.cs">
+      <DependentUpon>terminate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="terminate.aspx.designer.cs">
+      <DependentUpon>terminate.aspx</DependentUpon>
+    </Compile>
     <Compile Include="verification.aspx.cs">
       <DependentUpon>verification.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -277,12 +329,19 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Main.Master" />
+    <Content Include="anim\computerguy.lottie" />
     <None Include="packages.config" />
     <None Include="Properties\PublishProfiles\FTPProfile.pubxml" />
   </ItemGroup>
   <Import Project="..\..\Shared-References\Convilguous Shared\Convilguous Shared.projitems" Label="Shared" />
   <Import Project="..\..\Shared-References\Convilguous Shared Internal Use\Convilguous Shared Internal Use.projitems" Label="Shared" />
   <Import Project="..\..\Shared-References\Convilguous Shared Windows Background\Convilguous Shared Windows Background.projitems" Label="Shared" />
+  <Import Project="..\..\Shared-References\Convilguous Shared Commsv7\Convilguous Shared Commsv7.projitems" Label="Shared" />
+  <Import Project="..\..\Shared-References\Convilguous Shared Error Logging\Convilguous Shared Error Logging.projitems" Label="Shared" />
+  <Import Project="..\..\Shared-References\Convilguous Shared Binary Comms\Convilguous Shared Binary Comms.projitems" Label="Shared" />
+  <Import Project="..\..\Shared-References\Convilguous Shared SQL Server\Convilguous Shared SQL Server.projitems" Label="Shared" />
+  <Import Project="..\..\Shared-References\Convilguous Shared Non-Volatile Storage Windows\Convilguous Shared Non-Volatile Storage Windows.projitems" Label="Shared" />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
