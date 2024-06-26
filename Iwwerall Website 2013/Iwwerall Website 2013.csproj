@@ -230,7 +230,6 @@
     <Content Include="movetarget.aspx" />
     <Content Include="myip.aspx" />
     <Content Include="resetpassword.aspx" />
-    <Content Include="terminate.aspx" />
     <Content Include="verification.aspx" />
     <Content Include="videos\iwwerall-white-background-zoomed-out.mp4" />
     <Content Include="Web.config" />
@@ -312,13 +311,6 @@
     </Compile>
     <Compile Include="resetpassword.aspx.designer.cs">
       <DependentUpon>resetpassword.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="terminate.aspx.cs">
-      <DependentUpon>terminate.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="terminate.aspx.designer.cs">
-      <DependentUpon>terminate.aspx</DependentUpon>
     </Compile>
     <Compile Include="verification.aspx.cs">
       <DependentUpon>verification.aspx</DependentUpon>

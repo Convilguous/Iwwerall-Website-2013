@@ -72,7 +72,7 @@ namespace Iwwerall_Website_2013
                 }
                 catch (Exception eee)
                 {
-                    GFS.LogError(eee, GeneralFunctions.EventLogEntryType.Error, 26060657);
+                    GFS.LogError(eee, GeneralFunctions.EventLogEntryType.Error, 2406260657);
                 }
             }
         }
@@ -113,7 +113,7 @@ namespace Iwwerall_Website_2013
             }
             catch (Exception eee)
             {
-                GFS.LogError(eee, GeneralFunctions.EventLogEntryType.Error, 26060658);
+                GFS.LogError(eee, GeneralFunctions.EventLogEntryType.Error, 2406260658);
             }
         }
     }
