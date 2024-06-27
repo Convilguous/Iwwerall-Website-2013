@@ -61,7 +61,7 @@ namespace Iwwerall_Website_2013
                 }
                 catch (Exception eee)
                 {
-                    GFS.LogError(eee, System.Diagnostics.EventLogEntryType.Error, 2310110955);
+                    GFS.LogError(eee, GeneralFunctions.EventLogEntryType.Error, 2310110955);
                 }
             }
         }

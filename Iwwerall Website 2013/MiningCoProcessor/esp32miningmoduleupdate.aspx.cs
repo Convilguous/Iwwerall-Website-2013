@@ -59,7 +59,7 @@ namespace Iwwerall_Website_2013.MiningCoProcessor
             }
             catch (Exception eee)
             {
-                GFS.LogError(eee, System.Diagnostics.EventLogEntryType.Error, 2111191846);
+                GFS.LogError(eee, GeneralFunctions.EventLogEntryType.Error, 2111191846);
             }
             Page.Response.Write(Response);
         }
