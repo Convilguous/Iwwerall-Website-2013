@@ -222,6 +222,8 @@
     <Content Include="images\iwwerall-terminate.svg" />
     <Content Include="images\iwwerall-verification.svg" />
     <Content Include="images\logo250.jpg" />
+    <Content Include="KoolKlok\esp32update.aspx" />
+    <Content Include="KoolKlok\getserial.aspx" />
     <Content Include="MiningCoProcessor\esp32miningmoduleupdate.aspx" />
     <Content Include="MiningCoProcessor\getremotecommands.aspx" />
     <Content Include="MiningCoProcessor\shortalarm.aspx" />
@@ -247,6 +249,20 @@
     </Compile>
     <Compile Include="default.aspx.designer.cs">
       <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="KoolKlok\esp32update.aspx.cs">
+      <DependentUpon>esp32update.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="KoolKlok\esp32update.aspx.designer.cs">
+      <DependentUpon>esp32update.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="KoolKlok\getserial.aspx.cs">
+      <DependentUpon>getserial.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="KoolKlok\getserial.aspx.designer.cs">
+      <DependentUpon>getserial.aspx</DependentUpon>
     </Compile>
     <Compile Include="Main.Master.cs">
       <DependentUpon>Main.Master</DependentUpon>

@@ -12,7 +12,7 @@ using System.Web.UI.WebControls;
 
 namespace Iwwerall_Website_2013.MiningCoProcessor
 {
-    public partial class esp32update : System.Web.UI.Page
+    public partial class esp32miningmoduleupdate : System.Web.UI.Page
     {
         GeneralFunctions GF = new GeneralFunctions();
         GeneralFunctionsAppSpecific GFS = new GeneralFunctionsAppSpecific();
@@ -59,7 +59,7 @@ namespace Iwwerall_Website_2013.MiningCoProcessor
             }
             catch (Exception eee)
             {
-                GFS.LogError(eee, GeneralFunctions.EventLogEntryType.Error, 2111191846);
+                GFS.LogError(eee, GeneralFunctions.EventLogEntryType.Error, 2407041329);
             }
             Page.Response.Write(Response);
         }
