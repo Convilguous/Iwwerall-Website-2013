@@ -87,13 +87,13 @@ namespace Iwwerall_Website_2013.MiningCoProcessor
             }
             catch (Exception eee)
             {
-                GFS.LogError(eee, GeneralFunctions.EventLogEntryType.Error, 2111291757);
+                GFS.LogError(eee, GeneralFunctions.EventLogEntryType.Error, 2502201225);
                 string WholeRequest = "";
                 foreach(string Key in Request.QueryString.AllKeys)
                 {
                     WholeRequest += $"{Key}={Request.QueryString[Key]}, ";
                 }
-                GFS.LogError($"Serialnumber with error: {SerialNumber}, {WholeRequest}", GeneralFunctions.EventLogEntryType.Error, 2111291756);
+                GFS.LogError($"Serialnumber with error: {SerialNumber}, {WholeRequest}", GeneralFunctions.EventLogEntryType.Error, 2502201225);
             }
             Page.Response.Write(Response);
         }

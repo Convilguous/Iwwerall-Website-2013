@@ -224,6 +224,8 @@
     <Content Include="images\logo250.jpg" />
     <Content Include="KoolKlok\esp32update.aspx" />
     <Content Include="KoolKlok\getserial.aspx" />
+    <Content Include="KoolKlok\shortalarm.aspx" />
+    <Content Include="KoolKlok\updatesensor.aspx" />
     <Content Include="MiningCoProcessor\esp32miningmoduleupdate.aspx" />
     <Content Include="MiningCoProcessor\getremotecommands.aspx" />
     <Content Include="MiningCoProcessor\shortalarm.aspx" />
@@ -263,6 +265,20 @@
     </Compile>
     <Compile Include="KoolKlok\getserial.aspx.designer.cs">
       <DependentUpon>getserial.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="KoolKlok\shortalarm.aspx.cs">
+      <DependentUpon>shortalarm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="KoolKlok\shortalarm.aspx.designer.cs">
+      <DependentUpon>shortalarm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="KoolKlok\updatesensor.aspx.cs">
+      <DependentUpon>updatesensor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="KoolKlok\updatesensor.aspx.designer.cs">
+      <DependentUpon>updatesensor.aspx</DependentUpon>
     </Compile>
     <Compile Include="Main.Master.cs">
       <DependentUpon>Main.Master</DependentUpon>
